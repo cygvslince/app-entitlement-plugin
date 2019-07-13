@@ -2,15 +2,10 @@
 <plugin id="app-entitlements" version="0.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>AppEntitlements</name>
   <platform name="ios">
-    <config-file target="*-Debug.plist" parent="com.apple.developer.in-app-payments">
+    <edit-config file="Entitlements-*.plist" target="com.apple.developer.associated-domains" mode="replace">
       <array>
         <string>applinks:www.edemocratie.net</string>
       </array>
-    </config-file>
-    <config-file target="*-Release.plist" parent="com.apple.developer.in-app-payments">
-      <array>
-        <string>applinks:www.edemocratie.net</string>
-      </array>
-    </config-file>
+    </edit-config>
   </platform>
 </plugin>
