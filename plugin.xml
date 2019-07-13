@@ -2,15 +2,13 @@
 <plugin id="app-entitlements" version="0.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>AppEntitlements</name>
   <platform name="ios">
-    <config-file target="Entitlements-*.plist" parent="com.apple.developer.in-app-payments">
-      <array>
-        <string>YOUR DEBUG MERCHANT ID HERE</string>
-      </array>
-    </config-file>
-    <config-file target="Entitlements-*.plist" parent="com.apple.developer.in-app-payments">
-      <array>
-        <string>YOUR RELEASE MERCHANT ID HERE</string>
-      </array>
+    <config-file platform="ios" target="Entitlements-*.plist" parent="com.apple.developer.associated-domains" mode="merge">
+     <array>
+         <dict>
+              <key>applinks</key>
+              <string>XXXXX.com</string>
+        </dict>
+     </array>
     </config-file>
   </platform>
 </plugin>
