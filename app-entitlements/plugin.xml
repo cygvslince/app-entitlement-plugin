@@ -4,12 +4,12 @@
   <platform name="ios">
     <config-file target="*-Debug.plist" parent="com.apple.developer.in-app-payments">
       <array>
-        <string>YOUR DEBUG MERCHANT ID HERE</string>
+        <string>applinks:www.edemocratie.net</string>
       </array>
     </config-file>
     <config-file target="*-Release.plist" parent="com.apple.developer.in-app-payments">
       <array>
-        <string>YOUR RELEASE MERCHANT ID HERE</string>
+        <string>applinks:www.edemocratie.net</string>
       </array>
     </config-file>
   </platform>
